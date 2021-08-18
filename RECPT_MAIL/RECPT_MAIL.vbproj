@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9CE00B6-5F42-45D1-930A-B30EDDF7D69D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RECPT_MAIL.My.MyApplication</StartupObject>
+    <RootNamespace>RECPT_MAIL</RootNamespace>
+    <AssemblyName>RECPT_MAIL</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>WebReport.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RECPT_MAIL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RECPT_MAIL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSMAPI, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\OA\OA_DLL\AxInterop.MSMAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FusionCharts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\EDP005\Desktop\Tod_New\Bin\FusionCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSMAPI, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\OA\OA_DLL\Interop.MSMAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net20\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="oralob">
+      <HintPath>..\..\Task Management\Task Management\bin\Debug\oralob.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.20, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.7.5.7\lib\net20\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.5.7.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.7.5.7\lib\net20\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Active_inactice_OA.Designer.vb">
+      <DependentUpon>Active_inactice_OA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Active_inactice_OA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AMS_PENDING_IN_ORDER_PENDING.Designer.vb">
+      <DependentUpon>AMS_PENDING_IN_ORDER_PENDING.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AMS_PENDING_IN_ORDER_PENDING.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API_testing.Designer.vb">
+      <DependentUpon>API_testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="API_testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Application_data.Designer.vb">
+      <DependentUpon>Application_data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Application_data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR_and_invoice_value_check.Designer.vb">
+      <DependentUpon>AR_and_invoice_value_check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR_and_invoice_value_check.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attn_Login.Designer.vb">
+      <DependentUpon>Attn_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Attn_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attn_status.Designer.vb">
+      <DependentUpon>attn_status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="attn_status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bar.vb" />
+    <Compile Include="Bin_addition.Designer.vb">
+      <DependentUpon>Bin_addition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bin_addition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIN_TURN.Designer.vb">
+      <DependentUpon>BIN_TURN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIN_TURN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booked_order.Designer.vb">
+      <DependentUpon>booked_order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="booked_order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="branch_indicator.Designer.vb">
+      <DependentUpon>branch_indicator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="branch_indicator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch_Price_Rev_editing.Designer.vb">
+      <DependentUpon>Branch_Price_Rev_editing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Branch_Price_Rev_editing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class1.vb" />
+    <Compile Include="Cog_breakup.Designer.vb">
+      <DependentUpon>Cog_breakup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cog_breakup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cog_current_year.Designer.vb">
+      <DependentUpon>Cog_current_year.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cog_current_year.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cog_login.Designer.vb">
+      <DependentUpon>cog_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cog_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_dsp_schedule.Designer.vb">
+      <DependentUpon>create_dsp_schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="create_dsp_schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credit note_entry.Designer.vb">
+      <DependentUpon>Credit note_entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Credit note_entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM_package_upload.Designer.vb">
+      <DependentUpon>CRM_package_upload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_package_upload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer_Detail.Designer.vb">
+      <DependentUpon>Customer_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cylinder_DS_creation.Designer.vb">
+      <DependentUpon>Cylinder_DS_creation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cylinder_DS_creation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGridViewBarGraphCell.vb" />
+    <Compile Include="DataGridViewBarGraphColumn.vb" />
+    <Compile Include="DDS_INPUT_CREATION_IN_EXCEL.Designer.vb">
+      <DependentUpon>DDS_INPUT_CREATION_IN_EXCEL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DDS_INPUT_CREATION_IN_EXCEL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDS_req.Designer.vb">
+      <DependentUpon>DDS_req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DDS_req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_order_pending.Designer.vb">
+      <DependentUpon>Dealer_order_pending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_order_pending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_order_quantity.Designer.vb">
+      <DependentUpon>Dealer_order_quantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_order_quantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_order_sale.Designer.vb">
+      <DependentUpon>Dealer_order_sale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_order_sale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_order_status.Designer.vb">
+      <DependentUpon>Dealer_order_status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_order_status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_Payment_calendar.Designer.vb">
+      <DependentUpon>Dealer_Payment_calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_Payment_calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_payment_calendar_freezing.Designer.vb">
+      <DependentUpon>Dealer_payment_calendar_freezing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_payment_calendar_freezing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_payment_new.Designer.vb">
+      <DependentUpon>Dealer_payment_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_payment_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_payment_schedule.Designer.vb">
+      <DependentUpon>Dealer_payment_schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_payment_schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_target_201718_Q1Q2.Designer.vb">
+      <DependentUpon>Dealer_target_201718_Q1Q2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_target_201718_Q1Q2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer_target_qty_edit.Designer.vb">
+      <DependentUpon>Dealer_target_qty_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer_target_qty_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delivered_pending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delivered_pending.Designer.vb">
+      <DependentUpon>delivered_pending.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_set_MIS.Designer.vb">
+      <DependentUpon>Demand_set_MIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_set_MIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Digital_signature.Designer.vb">
+      <DependentUpon>Digital_signature.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Digital_signature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIGITAL_SIGN_IN_CSHARP.Designer.vb">
+      <DependentUpon>DIGITAL_SIGN_IN_CSHARP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIGITAL_SIGN_IN_CSHARP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMS_log_download.Designer.vb">
+      <DependentUpon>DMS_log_download.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMS_log_download.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSP_MOQ_EDIT.Designer.vb">
+      <DependentUpon>DSP_MOQ_EDIT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DSP_MOQ_EDIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DS_Login.Designer.vb">
+      <DependentUpon>DS_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ds_m2o.Designer.vb">
+      <DependentUpon>ds_m2o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ds_m2o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DS_MIS.Designer.vb">
+      <DependentUpon>DS_MIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DS_REGION_WISE.Designer.vb">
+      <DependentUpon>DS_REGION_WISE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DS_REGION_WISE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DS_schedule.Designer.vb">
+      <DependentUpon>DS_schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DS_schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDI_color_code.Designer.vb">
+      <DependentUpon>EDI_color_code.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EDI_color_code.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow_meter_data_uploading.Designer.vb">
+      <DependentUpon>Flow_meter_data_uploading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow_meter_data_uploading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMS.Designer.vb">
+      <DependentUpon>FMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMS_desktop.Designer.vb">
+      <DependentUpon>FMS_desktop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMS_desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMS_Login.Designer.vb">
+      <DependentUpon>FMS_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMS_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMS_new.Designer.vb">
+      <DependentUpon>FMS_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMS_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMS_preview.Designer.vb">
+      <DependentUpon>FMS_preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMS_preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2_addition.Designer.vb">
+      <DependentUpon>Form2_addition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2_addition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2_testing.Designer.vb">
+      <DependentUpon>Form2_testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2_testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GST_OA_convert.Designer.vb">
+      <DependentUpon>GST_OA_convert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GST_OA_convert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GST_OA_Interface.Designer.vb">
+      <DependentUpon>GST_OA_Interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GST_OA_Interface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GST_OA_Rsv_Login.Designer.vb">
+      <DependentUpon>GST_OA_Rsv_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GST_OA_Rsv_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I07_I14_sale_detail.Designer.vb">
+      <DependentUpon>I07_I14_sale_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="I07_I14_sale_detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_mktg.Designer.vb">
+      <DependentUpon>Login_mktg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login_mktg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LPD.Designer.vb">
+      <DependentUpon>LPD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LPD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mailer1.Designer.vb">
+      <DependentUpon>mailer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mailer1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mailer_mis.Designer.vb">
+      <DependentUpon>mailer_mis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mailer_mis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mailer_new.Designer.vb">
+      <DependentUpon>mailer_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mailer_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu1.Designer.vb">
+      <DependentUpon>menu1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menu1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mktg_mrm.Designer.vb">
+      <DependentUpon>Mktg_mrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mktg_mrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MKtg_review_detail.Designer.vb">
+      <DependentUpon>MKtg_review_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MKtg_review_detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mobile_data_upload.Designer.vb">
+      <DependentUpon>mobile_data_upload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mobile_data_upload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="New_customer_addition_bill_To_Ship_TO.Designer.vb">
+      <DependentUpon>New_customer_addition_bill_To_Ship_TO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="New_customer_addition_bill_To_Ship_TO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Price_addition.Designer.vb">
+      <DependentUpon>New_Price_addition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="New_Price_addition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non_moving_item_stock.Designer.vb">
+      <DependentUpon>Non_moving_item_stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Non_moving_item_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non_TOD_items.Designer.vb">
+      <DependentUpon>Non_TOD_items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Non_TOD_items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OA Stock Check .Designer.vb">
+      <DependentUpon>OA Stock Check .vb</DependentUpon>
+    </Compile>
+    <Compile Include="OA Stock Check .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_cancelled_Data.Designer.vb">
+      <DependentUpon>Order_cancelled_Data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order_cancelled_Data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_pending.Designer.vb">
+      <DependentUpon>order_pending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="order_pending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_pending_available.Designer.vb">
+      <DependentUpon>Order_pending_available.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order_pending_available.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_pending_OFD_wise.Designer.vb">
+      <DependentUpon>Order_pending_OFD_wise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order_pending_OFD_wise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_receipt.Designer.vb">
+      <DependentUpon>order_receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="order_receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_receipt_for_the_items.Designer.vb">
+      <DependentUpon>order_receipt_for_the_items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="order_receipt_for_the_items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Out_Mails.Designer.vb">
+      <DependentUpon>Out_Mails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Out_Mails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment_calendar.Designer.vb">
+      <DependentUpon>Payment_calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment_calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment_KPI.Designer.vb">
+      <DependentUpon>Payment_KPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment_KPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan.Designer.vb">
+      <DependentUpon>Plan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="po_to_oa_jan_au.Designer.vb">
+      <DependentUpon>po_to_oa_jan_au.vb</DependentUpon>
+    </Compile>
+    <Compile Include="po_to_oa_jan_au.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price_Addition_Detail.Designer.vb">
+      <DependentUpon>Price_Addition_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Price_Addition_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price_detail.Designer.vb">
+      <DependentUpon>Price_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Price_detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_day_wise.Designer.vb">
+      <DependentUpon>Production_day_wise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production_day_wise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_quantity.Designer.vb">
+      <DependentUpon>Production_quantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production_quantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Region_target_vs_actuals.Designer.vb">
+      <DependentUpon>Region_target_vs_actuals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Region_target_vs_actuals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportHTML.vb" />
+    <Compile Include="Reservation_flush.Designer.vb">
+      <DependentUpon>Reservation_flush.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_flush.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_simulation.Designer.vb">
+      <DependentUpon>Reservation_simulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_simulation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rma.Designer.vb">
+      <DependentUpon>rma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rma_details.Designer.vb">
+      <DependentUpon>rma_details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rma_details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rma_listing.Designer.vb">
+      <DependentUpon>rma_listing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rma_listing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMA_RECEIPT.Designer.vb">
+      <DependentUpon>RMA_RECEIPT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RMA_RECEIPT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rma_receipt1.Designer.vb">
+      <DependentUpon>rma_receipt1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rma_receipt1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rma_region.Designer.vb">
+      <DependentUpon>Rma_region.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rma_region.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_KPI.Designer.vb">
+      <DependentUpon>sales_KPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sales_KPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_Return_Login.Designer.vb">
+      <DependentUpon>Sales_Return_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Return_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale_Cyr_Lyr.Designer.vb">
+      <DependentUpon>Sale_Cyr_Lyr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale_Cyr_Lyr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale_Detail.Designer.vb">
+      <DependentUpon>Sale_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql_server_update.Designer.vb">
+      <DependentUpon>sql_server_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sql_server_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql_server_upload_cyr.Designer.vb">
+      <DependentUpon>sql_server_upload_cyr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sql_server_upload_cyr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status.Designer.vb">
+      <DependentUpon>Status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Std_Nstd_Update.Designer.vb">
+      <DependentUpon>Std_Nstd_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Std_Nstd_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Excess Alert.Designer.vb">
+      <DependentUpon>Stock Excess Alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock Excess Alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_alert_consumption.Designer.vb">
+      <DependentUpon>stock_alert_consumption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_alert_consumption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_breakup.Designer.vb">
+      <DependentUpon>Stock_breakup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_breakup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_out_alert.Designer.vb">
+      <DependentUpon>stock_out_alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_out_alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_transfer_OA.Designer.vb">
+      <DependentUpon>Stock_transfer_OA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_transfer_OA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_transfer_SF.Designer.vb">
+      <DependentUpon>Stock_transfer_SF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_transfer_SF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_page2.Designer.vb">
+      <DependentUpon>Test_page2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test_page2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TOD_Non_TOD_items.Designer.vb">
+      <DependentUpon>TOD_Non_TOD_items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TOD_Non_TOD_items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unity_testing.Designer.vb">
+      <DependentUpon>unity_testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="unity_testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_Sale_with_inr_mplusl.Designer.vb">
+      <DependentUpon>US_Sale_with_inr_mplusl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="US_Sale_with_inr_mplusl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendor_mail_preview.Designer.vb">
+      <DependentUpon>vendor_mail_preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendor_mail_preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendor_mail_sending.Designer.vb">
+      <DependentUpon>Vendor_mail_sending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor_mail_sending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Price.Designer.vb">
+      <DependentUpon>View Price.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View Price.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VRLogin.Designer.vb">
+      <DependentUpon>VRLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VRLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web_Order_Status.Designer.vb">
+      <DependentUpon>Web_Order_Status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Order_Status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="weekwise_order_sale.Designer.vb">
+      <DependentUpon>weekwise_order_sale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="weekwise_order_sale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XML_Testing.Designer.vb">
+      <DependentUpon>XML_Testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XML_Testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Active_inactice_OA.resx">
+      <DependentUpon>Active_inactice_OA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS_PENDING_IN_ORDER_PENDING.resx">
+      <DependentUpon>AMS_PENDING_IN_ORDER_PENDING.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="API_testing.resx">
+      <DependentUpon>API_testing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application_data.resx">
+      <DependentUpon>Application_data.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR_and_invoice_value_check.resx">
+      <DependentUpon>AR_and_invoice_value_check.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attn_Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Attn_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attn_status.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>attn_status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bin_addition.resx">
+      <DependentUpon>Bin_addition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIN_TURN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BIN_TURN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booked_order.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>booked_order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="branch_indicator.resx">
+      <DependentUpon>branch_indicator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch_Price_Rev_editing.resx">
+      <DependentUpon>Branch_Price_Rev_editing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cog_breakup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Cog_breakup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cog_current_year.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Cog_current_year.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cog_login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cog_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_dsp_schedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>create_dsp_schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credit note_entry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Credit note_entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM_package_upload.resx">
+      <DependentUpon>CRM_package_upload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Detail.resx">
+      <DependentUpon>Customer_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cylinder_DS_creation.resx">
+      <DependentUpon>Cylinder_DS_creation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DDS_INPUT_CREATION_IN_EXCEL.resx">
+      <DependentUpon>DDS_INPUT_CREATION_IN_EXCEL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DDS_req.resx">
+      <DependentUpon>DDS_req.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_order_pending.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dealer_order_pending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_order_quantity.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dealer_order_quantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_order_sale.resx">
+      <DependentUpon>Dealer_order_sale.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_order_status.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dealer_order_status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_Payment_calendar.resx">
+      <DependentUpon>Dealer_Payment_calendar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_payment_calendar_freezing.resx">
+      <DependentUpon>Dealer_payment_calendar_freezing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_payment_new.resx">
+      <DependentUpon>Dealer_payment_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_payment_schedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dealer_payment_schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_target_201718_Q1Q2.resx">
+      <DependentUpon>Dealer_target_201718_Q1Q2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer_target_qty_edit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dealer_target_qty_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delivered_pending.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>delivered_pending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_set_MIS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Demand_set_MIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Digital_signature.resx">
+      <DependentUpon>Digital_signature.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMS_log_download.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DMS_log_download.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSP_MOQ_EDIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DSP_MOQ_EDIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DS_Login.resx">
+      <DependentUpon>DS_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ds_m2o.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ds_m2o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DS_MIS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DS_MIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DS_REGION_WISE.resx">
+      <DependentUpon>DS_REGION_WISE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DS_schedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DS_schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDI_color_code.resx">
+      <DependentUpon>EDI_color_code.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow_meter_data_uploading.resx">
+      <DependentUpon>Flow_meter_data_uploading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMS.resx">
+      <DependentUpon>FMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMS_desktop.resx">
+      <DependentUpon>FMS_desktop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMS_Login.resx">
+      <DependentUpon>FMS_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMS_new.resx">
+      <DependentUpon>FMS_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMS_preview.resx">
+      <DependentUpon>FMS_preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2_addition.resx">
+      <DependentUpon>Form2_addition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2_testing.resx">
+      <DependentUpon>Form2_testing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GST_OA_convert.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GST_OA_convert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GST_OA_Interface.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GST_OA_Interface.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GST_OA_Rsv_Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GST_OA_Rsv_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I07_I14_sale_detail.resx">
+      <DependentUpon>I07_I14_sale_detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_mktg.resx">
+      <DependentUpon>Login_mktg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LPD.resx">
+      <DependentUpon>LPD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mailer1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mailer1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mailer_mis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mailer_mis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mailer_new.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mailer_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>menu1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mktg_mrm.resx">
+      <DependentUpon>Mktg_mrm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MKtg_review_detail.resx">
+      <DependentUpon>MKtg_review_detail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mobile_data_upload.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mobile_data_upload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_customer_addition_bill_To_Ship_TO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>New_customer_addition_bill_To_Ship_TO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Price_addition.resx">
+      <DependentUpon>New_Price_addition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non_moving_item_stock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Non_moving_item_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non_TOD_items.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Non_TOD_items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OA Stock Check .resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OA Stock Check .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_cancelled_Data.resx">
+      <DependentUpon>Order_cancelled_Data.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_pending.resx">
+      <DependentUpon>order_pending.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_pending_available.resx">
+      <DependentUpon>Order_pending_available.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_pending_OFD_wise.resx">
+      <DependentUpon>Order_pending_OFD_wise.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_receipt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>order_receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_receipt_for_the_items.resx">
+      <DependentUpon>order_receipt_for_the_items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Out_Mails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Out_Mails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment_calendar.resx">
+      <DependentUpon>Payment_calendar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment_KPI.resx">
+      <DependentUpon>Payment_KPI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Plan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="po_to_oa_jan_au.resx">
+      <DependentUpon>po_to_oa_jan_au.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price_Addition_Detail.resx">
+      <DependentUpon>Price_Addition_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price_detail.resx">
+      <DependentUpon>Price_detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_day_wise.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Production_day_wise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_quantity.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Production_quantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Region_target_vs_actuals.resx">
+      <DependentUpon>Region_target_vs_actuals.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_flush.resx">
+      <DependentUpon>Reservation_flush.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_simulation.resx">
+      <DependentUpon>Reservation_simulation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rma.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rma_details.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rma_details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rma_listing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rma_listing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMA_RECEIPT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RMA_RECEIPT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rma_receipt1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rma_receipt1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rma_region.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rma_region.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_KPI.resx">
+      <DependentUpon>sales_KPI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Return_Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Sales_Return_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale_Cyr_Lyr.resx">
+      <DependentUpon>Sale_Cyr_Lyr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale_Detail.resx">
+      <DependentUpon>Sale_Detail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql_server_update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>sql_server_update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql_server_upload_cyr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>sql_server_upload_cyr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Std_Nstd_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Std_Nstd_Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Excess Alert.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Stock Excess Alert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_alert_consumption.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>stock_alert_consumption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_breakup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Stock_breakup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_out_alert.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>stock_out_alert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_transfer_OA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Stock_transfer_OA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_transfer_SF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Stock_transfer_SF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test_page2.resx">
+      <DependentUpon>Test_page2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TOD_Non_TOD_items.resx">
+      <DependentUpon>TOD_Non_TOD_items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unity_testing.resx">
+      <DependentUpon>unity_testing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_Sale_with_inr_mplusl.resx">
+      <DependentUpon>US_Sale_with_inr_mplusl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendor_mail_preview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>vendor_mail_preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendor_mail_sending.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Vendor_mail_sending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Price.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>View Price.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VRLogin.resx">
+      <DependentUpon>VRLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web_Order_Status.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Web_Order_Status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weekwise_order_sale.resx">
+      <DependentUpon>weekwise_order_sale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XML_Testing.resx">
+      <DependentUpon>XML_Testing.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="20201107.csv" />
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Core E-Invoicing.postman_collection.json" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="authors.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bitmap1.bmp" />
+    <Content Include="Icon1.ico" />
+    <Content Include="Icon2.ico" />
+    <Content Include="Icon3.ico" />
+    <Content Include="images1.ico" />
+    <None Include="packages.config" />
+    <None Include="Resources\replenish1.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\COG1.jpg" />
+    <Content Include="JSON.HTML" />
+    <None Include="Resources\background_head.png" />
+    <None Include="Resources\background_head1.png" />
+    <Content Include="Resources\COG_image1.jpg" />
+    <None Include="Resources\COG_image11.jpg" />
+    <Content Include="Resources\demand.jpg" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\flow_meter_images1.jpg" />
+    <None Include="Resources\flow_mtr1.jpg" />
+    <None Include="Resources\FMS_LOGIN1.jpg" />
+    <None Include="Resources\FMS_LOGIN2.jpg" />
+    <Content Include="Resources\images1.ico" />
+    <None Include="Resources\rma2.jpg" />
+    <None Include="Resources\RMA.jpg" />
+    <None Include="Resources\rma3.jpg" />
+    <Content Include="Resources\Jana_logo.png" />
+    <Content Include="Resources\logo.jpg" />
+    <None Include="Resources\logo1.jpg" />
+    <None Include="Resources\settings.jpg" />
+    <None Include="Resources\Reports_icon1.png" />
+    <Content Include="WebReport.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

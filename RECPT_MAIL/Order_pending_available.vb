@@ -1,0 +1,12 @@
+﻿Public Class Order_pending_available
+    Private Sub Order_pending_available_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        sql = "SELECT 'Order Pending' Value_for,ROUND(SUM((((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE))/100000,2) ""Total value"",ROUND(SUM(case when  order_ff_dt<next_day(sysdate-1,'sat')-27 then (((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE) end )/100000,2) ""upto wk minus4"",ROUND(SUM(case when   to_char(order_ff_dt,'IYYYIW')<=to_char(sysdate,'IYYYIW') then (((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE) end ) /100000,2)""upto current wk"",ROUND(SUM(case when   to_char(order_ff_dt,'IYYYIW')=to_char(sysdate,'IYYYIW')+1 then (((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE) end )/100000,2) ""Current wk plus1"",ROUND(SUM(case when    to_char(order_ff_dt,'IYYYIW')=to_char(sysdate,'IYYYIW')+2 then (((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE) end )/100000,2) ""Current wk plus2"",ROUND(SUM(case when  to_char(order_ff_dt,'IYYYIW')>=to_char(sysdate,'IYYYIW')+3  then (((ORDERED_QUANTITY-SHIPPED_QUANTITY))*UNIT_SELLING_PRICE) end )/100000,2) ""After week plus2""  from JAN_IT.JAN_SALES_PLAN_TV_T "
+        sql &= " union "
+        sql &= " SELECT 'Available' value_for,ROUND(SUM(RSV_QTY*UNIT_SELLING_PRICE)/100000,2) TOTAL_AVAILABLE_VALLE,ROUND(SUM(case when  order_ff_dt<next_day(sysdate-1,'sat')-27 then (RSV_QTY*UNIT_SELLING_PRICE) end )/100000,2) AVAILABLE_upto_wk_4,ROUND(SUM(case when   to_char(order_ff_dt,'IYYYIW')<=to_char(sysdate,'IYYYIW') then (RSV_QTY*UNIT_SELLING_PRICE) end )/100000,2) AVAILABLE_upto_cur_wk,ROUND(SUM(case when   to_char(order_ff_dt,'IYYYIW')=to_char(sysdate,'IYYYIW')+1 then (RSV_QTY*UNIT_SELLING_PRICE) end )/100000,2) AVAILABLE_cur_wk_plus1,ROUND(SUM(case when    to_char(order_ff_dt,'IYYYIW')=to_char(sysdate,'IYYYIW')+2 then (RSV_QTY*UNIT_SELLING_PRICE) end )/100000,2) AVAILABLE_cur_wk_plus2,ROUND(SUM(case when  to_char(order_ff_dt,'IYYYIW')>=to_char(sysdate,'IYYYIW')+3  then (RSV_QTY*UNIT_SELLING_PRICE) end )/100000,2) AVAILafter_week_plus2 from JAN_IT.JAN_SALES_PLAN_TV_T order by value_for desc"
+        ds = SQL_SELECT("data", sql)
+        dgv1.DataSource = ds.Tables("data")
+        For i = 1 To dgv1.ColumnCount - 1
+            dgv1.Columns(i).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+        Next
+    End Sub
+End Class

@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "595de9ec-08a0-46d6-b78c-ecb56eeff669",
+		"name": "Core E-Invoicing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate E-Invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "validate_invoice",
+						"value": " false",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "owner_id",
+						"value": "63767e4c-4dd9-427b-8487-6164d51e4edc",
+						"type": "text"
+					},
+					{
+						"key": "Schema-Type",
+						"value": "govt_schema_v1.1",
+						"type": "text"
+					},
+					{
+						"key": "x-cleartax-auth-token",
+						"value": "f21eb691-22e0-4005-a49d-bda0d8b64f03",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "gstin",
+						"value": "29AAFCD5862R000",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Version\": \"1.01\",  \n  \"TranDtls\": {\n    \"TaxSch\": \"GST\",\n    \"SupTyp\": \"B2B\",\n    \"RegRev\": \"Y\"\n  },\n  \"DocDtls\": {\n    \"Typ\": \"INV\",\n    \"No\": \"ABE-684\",\n    \"Dt\": \"08/03/2020\"\n  },\n  \"SellerDtls\": {\n    \"Gstin\": \"29AAFCD5862R000\",\n    \"LglNm\": \"TAN TEST NI\",\n    \"TrdNm\": \"TAN TEST NI\",\n    \"Addr1\": \"TEST2\",\n    \"Addr2\": \"TEST2\",\n    \"Loc\": \"GANDHINAGAR\",\n    \"Pin\": \"560002\",\n    \"State\": \"KARNATAKA\",\n    \"Ph\": \"9999999999\",\n    \"Em\": \"ABC@GMAIL.COM\"\n  },\n  \"BuyerDtls\": {\n    \"Gstin\": \"37BZNPM9430M1kl\",\n    \"LglNm\": \"TAN TEST NI\",\n    \"Pos\": \"37\",\n    \"Addr1\": \"TEST2\",\n    \"Addr2\": \"TEST2\",\n    \"Loc\": \"GANDHINAGAR\",\n    \"Pin\": \"560002\",\n    \"State\": \"KARNATAKA\",\n    \"Ph\": \"9999999999\",\n    \"Em\": \"ABC@GMAIL.COM\"\n  },\n  \"ItemList\": [\n    {\n      \"SlNo\": \"1\",\n      \"IsServc\": \"N\",\n      \"PrdDesc\": \"dfdfsdf\",\n      \"HsnCd\": \"1001\",\n      \"Qty\": \"10\",\n      \"Unit\": \"bag\",\n      \"UnitPrice\": 10.0,\n      \"TotAmt\": 151.0,\n      \"Discount\": 0.0,\n      \"AssAmt\": 151.0,\n      \"GstRt\": 10.0,\n      \"SgstAmt\": 0.0,\n      \"IgstAmt\": 10.0,\n      \"CgstAmt\": 0.0,\n      \"CesRt\": 15.0,\n      \"CesAmt\": 123.89,\n      \"CesNonAdvlAmt\": 0.0,\n      \"StateCesRt\": 36.0,\n      \"StateCesAmt\": 151.0,\n      \"StateCesNonAdvlAmt\": 0.0,\n      \"OthChrg\": 0.0,\n      \"TotItemVal\": 100.0\n    }\n  ],\n  \"ValDtls\": {\n    \"AssVal\": 100.0,\n    \"CgstVal\": 0.0,\n    \"SgstVal\": 0.0,\n    \"IgstVal\": 0.0,\n    \"CesVal\": 15.0,\n    \"StCesVal\": 36.0,\n    \"RndOffAmt\": 0.0,\n    \"TotInvVal\": 0.0\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://einvoicing.internal.cleartax.co/v1/govt/api/Invoice",
+					"protocol": "https",
+					"host": [
+						"einvoicing",
+						"internal",
+						"cleartax",
+						"co"
+					],
+					"path": [
+						"v1",
+						"govt",
+						"api",
+						"Invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NIC Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-cleartax-auth-token",
+						"value": "f21eb691-22e0-4005-a49d-bda0d8b64f03",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gstin\": \"29AAFCD5862R000\",\r\n  \"username\": \"cleartax\",\r\n  \"password\": \"cle@rtax@123\"\r\n}"
+				},
+				"url": {
+					"raw": "https://einvoicing.internal.cleartax.co/v1/nic_credentials/63767e4c-4dd9-427b-8487-6164d51e4edc/store_nic_credentials",
+					"protocol": "https",
+					"host": [
+						"einvoicing",
+						"internal",
+						"cleartax",
+						"co"
+					],
+					"path": [
+						"v1",
+						"nic_credentials",
+						"63767e4c-4dd9-427b-8487-6164d51e4edc",
+						"store_nic_credentials"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
